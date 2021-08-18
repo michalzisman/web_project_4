@@ -1,0 +1,24 @@
+.header {
+    margin: 45px 200px 40px 200px;
+    display: grid;
+    row-gap: 41px;
+}
+
+@media screen and (max-width: 1150px) {
+    .header {
+        margin: 45px 150px 40px 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        margin: 45px 80px 40px 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        margin: 28px auto 42px auto;
+        row-gap: 32px;
+    }
+}

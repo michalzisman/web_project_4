@@ -1,0 +1,9 @@
+.card__heart {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.card__heart:hover {
+    opacity: 0.5;
+}

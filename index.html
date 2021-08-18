@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="pages/index.css">
+        <title>Around The U.S.</title>
+    </head>
+    <body class="page">
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" alt="Around he U.S. logo">
+            <div class="header__line"></div>
+        </header>
+
+        <main class="content">
+
+            <section class="profile">
+                <div class="profile__data">
+                    <img class="profile__avatar" src="./images/avatar.jpg" alt="User Avatar">
+                    <div class="profile__info">
+                        <div class="profile__info-top">
+                            <h1 class="profile__name">Jacques Cousteau</h1>
+                            <div class="profile__edit"></div>
+                        </div>
+                        <p class="profile__description">Explorer</p>
+                    </div>
+                </div>                
+                <button class="profile__add-button">
+                </button>
+            </section>
+
+            <section class="cards">
+                <div class="card">
+                    <img class="card__image" src="./images/Yosemite_Valley.jpg" alt="Yosemite Valley">
+                    <div class="card__info">
+                        <h2 class="card__title">Yosemite Valley</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/Bald_Mountains.png" alt="Bald Mountains">
+                    <div class="card__info">
+                        <h2 class="card__title">Bald Mountains</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/Lago_di_Braies.png" alt="Lago di Braies">
+                    <div class="card__info">
+                        <h2 class="card__title">Lago di Braies</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/Vanoise_National_Park.png" alt="Vanoise National Park">
+                    <div class="card__info">
+                        <h2 class="card__title">Vanoise National Park</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/Latmar.png" alt="Latmar">
+                    <div class="card__info">
+                        <h2 class="card__title">Latmar</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./images/Lake_Louise.png" alt="Lake Louise">
+                    <div class="card__info">
+                        <h2 class="card__title">Lake Louise</h2>
+                        <input type="checkbox" class="card__checkbox" name="heart">
+                        <label class="card__heart" for="checkbox"><img src="./images/heart_unchecked.svg"></label>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="popup">
+                <div class="popup__background"></div>
+                <div class="popup__container">
+                    <img class="popup__close" src="./images/plus_icon.svg" alt="Close window">
+                    <form class="form">
+                        <h2 class="form__heading">Edit profile</h2>
+                        <fieldset class="form__fieldset">
+                            <input type="text" class="form__input" id="form__name" name="name" placeholder="Name">
+                            <div class="form__line"></div>
+                        </fieldset>
+                        <fieldset class="form__fieldset">
+                            <input type="text" class="form__input" id="form__description" name="about" placeholder="About">
+                            <div class="form__line"></div>
+                        </fieldset>
+                        <button class="form__submit" type="button">Save</button>
+                    </form>
+                </div>
+                
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
+        </footer>
+
+        <script src="script.js">
+    
+        </script>
+    </body>
+</html>
