@@ -11,8 +11,8 @@ This is a project about traveling across the US, where users can add, remove, or
 
 **Technologies**
 
-BEM, flexbox, grid.
+JS, BEM, flexbox, grid.
 
 **Link to GitHub Pages**
 
-
+https://michalzisman.github.io/web_project_4/
