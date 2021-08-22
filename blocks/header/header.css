@@ -1,7 +1,6 @@
 .header {
     margin: 45px 200px 40px 200px;
-    display: grid;
-    row-gap: 41px;
+    border-bottom: 1px solid #545454;
 }
 
 @media screen and (max-width: 1150px) {
@@ -19,6 +18,5 @@
 @media screen and (max-width: 768px) {
     .header {
         margin: 28px auto 42px auto;
-        row-gap: 32px;
     }
 }

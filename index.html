@@ -9,7 +9,6 @@
     <body class="page">
         <header class="header">
             <img class="logo" src="./images/logo.svg" alt="Around he U.S. logo">
-            <div class="header__line"></div>
         </header>
 
         <main class="content">
@@ -20,13 +19,12 @@
                     <div class="profile__info">
                         <div class="profile__info-top">
                             <h1 class="profile__name">Jacques Cousteau</h1>
-                            <div class="profile__edit"></div>
+                            <button type="button" class="profile__edit" aria-label="Edit"></button>
                         </div>
                         <p class="profile__description">Explorer</p>
                     </div>
                 </div>                
-                <button class="profile__add-button">
-                </button>
+                <button type="button" class="profile__add-button" aria-label="Add"></button>
             </section>
 
             <section class="cards">
@@ -34,78 +32,67 @@
                     <img class="card__image" src="./images/Yosemite_Valley.jpg" alt="Yosemite Valley">
                     <div class="card__info">
                         <h2 class="card__title">Yosemite Valley</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/Bald_Mountains.png" alt="Bald Mountains">
                     <div class="card__info">
                         <h2 class="card__title">Bald Mountains</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/Lago_di_Braies.png" alt="Lago di Braies">
                     <div class="card__info">
                         <h2 class="card__title">Lago di Braies</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/Vanoise_National_Park.png" alt="Vanoise National Park">
                     <div class="card__info">
                         <h2 class="card__title">Vanoise National Park</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/Latmar.png" alt="Latmar">
                     <div class="card__info">
                         <h2 class="card__title">Latmar</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card__image" src="./images/Lake_Louise.png" alt="Lake Louise">
                     <div class="card__info">
                         <h2 class="card__title">Lake Louise</h2>
-                        <input type="checkbox" class="card__checkbox" name="heart">
-                        <label class="card__heart"><img src="./images/heart_unchecked.svg" alt="Heart unchecked"></label>
+                        <button type="button" class="card__button" aria-label="Like"></button>
                     </div>
                 </div>
             </section>
             
-            <section class="popup">
-                <div class="popup__background"></div>
+            <div class="popup">
                 <div class="popup__container">
-                    <img class="popup__close" src="./images/plus_icon.svg" alt="Close window">
-                    <form class="form">
+                    <button type="button" class="popup__close" aria-label="Close"></button>
+                    <form class="form" name="editProfileForm">
                         <h2 class="form__heading">Edit profile</h2>
                         <fieldset class="form__fieldset">
                             <input type="text" class="form__input" id="form__name" name="name" placeholder="Name">
-                            <div class="form__line"></div>
-                        </fieldset>
-                        <fieldset class="form__fieldset">
                             <input type="text" class="form__input" id="form__description" name="about" placeholder="About">
-                            <div class="form__line"></div>
                         </fieldset>
-                        <button class="form__submit" type="button">Save</button>
+                        <button type="submit" class="form__submit">Save</button>
                     </form>
                 </div>
                 
-            </section>
+            </div>
         </main>
 
         <footer class="footer">
             <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
         </footer>
 
-        <script src="script.js">
+        <script src="scripts/script.js">
     
         </script>
     </body>

@@ -5,27 +5,28 @@ let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
 let inputName = document.getElementById("form__name");
 let inputDescription = document.getElementById("form__description");
-let saveEdit = document.querySelector(".form__submit");
+let submit = document.querySelector(".form");
 
 function editProfile() {
-    inputName.value = profileName.innerHTML;
-    inputDescription.value = profileDescription.innerHTML;
-    popup.className = popup.className + ` popup_opened`;
+    inputName.value = profileName.textContent;
+    inputDescription.value = profileDescription.textContent;
+    popup.classList.add(`popup_opened`);
 }
 
 function closePopup() {
-    inputName.innerHTML = "";
-    inputDescription.innerHTML = "";
-    popup.className = `popup`;
+    inputName.textContent = "";
+    inputDescription.textContent = "";
+    popup.classList.remove(`popup_opened`);
 }
 
-function saveChanges() {
+function saveChanges(event) {
     popup.className = `popup`;
-    profileName.innerHTML = inputName.value;
-    profileDescription.innerHTML = inputDescription.value;
+    profileName.textContent = inputName.value;
+    profileDescription.textContent = inputDescription.value;
+    event.preventDefault();
     closePopup();
 }
 
 edit.addEventListener("click", editProfile);
 closButton.addEventListener("click", closePopup);
-saveEdit.addEventListener("click", saveChanges);
+submit.addEventListener("submit", saveChanges);
