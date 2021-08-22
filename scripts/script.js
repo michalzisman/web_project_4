@@ -3,8 +3,8 @@ let closButton = document.querySelector(".popup__close");
 let popup = document.querySelector(".popup");
 let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
-let inputName = document.getElementById("form__name");
-let inputDescription = document.getElementById("form__description");
+let inputName = document.querySelector(".form_input_type_name");
+let inputDescription = document.querySelector(".form_input_type_description");
 let submit = document.querySelector(".form");
 
 function editProfile() {
@@ -20,7 +20,6 @@ function closePopup() {
 }
 
 function saveChanges(event) {
-    popup.className = `popup`;
     profileName.textContent = inputName.value;
     profileDescription.textContent = inputDescription.value;
     event.preventDefault();
