@@ -3,8 +3,8 @@ let closButton = document.querySelector(".popup__close");
 let popup = document.querySelector(".popup");
 let profileName = document.querySelector(".profile__name");
 let profileDescription = document.querySelector(".profile__description");
-let inputName = document.querySelector(".form_input_field_name");
-let inputDescription = document.querySelector(".form_input_field_description");
+let inputName = document.querySelector(".form__input_field_name");
+let inputDescription = document.querySelector(".form__input_field_description");
 let submit = document.querySelector(".form");
 
 function editProfile() {
