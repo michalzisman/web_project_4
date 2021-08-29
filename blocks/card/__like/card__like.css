@@ -1,4 +1,4 @@
-.card__button {
+.card__like {
     border: none;
     background-color: transparent;
     background-image: url("../../../images/heart_unchecked.svg");
@@ -11,6 +11,6 @@
     transition: 0.3s;
 }
 
-.card__button:hover {
+.card__like:hover {
     opacity: 0.5;
 }

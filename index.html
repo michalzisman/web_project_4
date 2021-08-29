@@ -28,53 +28,27 @@
             </section>
 
             <section class="cards">
-                <div class="card">
-                    <img class="card__image" src="./images/Yosemite_Valley.jpg" alt="Yosemite Valley">
-                    <div class="card__info">
-                        <h2 class="card__title">Yosemite Valley</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
+                <template id="card">
+                    <div class="card">
+                        <button type="button" class="card__delete" aria-label="Delete card"></button>
+                        <img class="card__image" src="." alt="">
+                        <div class="card__info">
+                            <h2 class="card__title"></h2>
+                            <button type="button" class="card__like" aria-label="Like"></button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/Bald_Mountains.png" alt="Bald Mountains">
-                    <div class="card__info">
-                        <h2 class="card__title">Bald Mountains</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/Lago_di_Braies.png" alt="Lago di Braies">
-                    <div class="card__info">
-                        <h2 class="card__title">Lago di Braies</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/Vanoise_National_Park.png" alt="Vanoise National Park">
-                    <div class="card__info">
-                        <h2 class="card__title">Vanoise National Park</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/Latmar.png" alt="Latmar">
-                    <div class="card__info">
-                        <h2 class="card__title">Latmar</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/Lake_Louise.png" alt="Lake Louise">
-                    <div class="card__info">
-                        <h2 class="card__title">Lake Louise</h2>
-                        <button type="button" class="card__button" aria-label="Like"></button>
-                    </div>
-                </div>
+                </template>
             </section>
             
             <div class="popup">
                 <div class="popup__container">
                     <button type="button" class="popup__close" aria-label="Close"></button>
+
+                    <div class="imageLarge">
+                        <img class="imageLarge__image" src="." alt="">
+                        <p class="imageLarge__name"></p>
+                    </div>
+
                     <form class="form" name="editProfileForm">
                         <h2 class="form__heading">Edit profile</h2>
                         <fieldset class="form__fieldset">
@@ -84,7 +58,6 @@
                         <button type="submit" class="form__submit">Save</button>
                     </form>
                 </div>
-                
             </div>
         </main>
 
