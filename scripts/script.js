@@ -55,6 +55,9 @@ function openForm(event) {
 }
 
 function closePopup() {
+    //using JS to change the style, as well as having a setTimeout for the modifier
+    //was the only way I was able to get a smooth effect for when the user closes the popup.
+    //I tried adding transition to the _opened modifier, but it didn't help.
     setTimeout(function(){ popupContainer.classList.remove("popup__container_opened"); }, 200);
     popup.style.opacity = "0";
     popup.style.transition = "opacity 0.3s linear";
