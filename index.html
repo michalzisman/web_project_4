@@ -39,24 +39,42 @@
                     </div>
                 </template>
             </section>
-            
-            <div class="popup">
+
+            <div class="popup popup_type_add-place">
                 <div class="popup__container">
-                    <button type="button" class="popup__close" aria-label="Close"></button>
+                    <button type="button" class="popup__closeBtn popup__closeBtn_add-place" aria-label="Close"></button>
+                    <form class="form form_type_add-place" name="addPlaceForm">
+                        <h2 class="form__heading">New place</h2>
+                        <fieldset class="form__fieldset">
+                            <input type="text" class="form__input form__input_field_title" name="title" placeholder="Title">
+                            <input type="text" class="form__input form__input_field_link" name="link" placeholder="Image link">
+                        </fieldset>
+                        <button type="submit" class="form__submit">Create</button>
+                    </form>
+                </div>
+            </div>
 
-                    <div class="imageLarge">
-                        <img class="imageLarge__image" src="." alt="img">
-                        <p class="imageLarge__name"></p>
-                    </div>
-
-                    <form class="form" name="editProfileForm">
+            <div class="popup popup_type_edit-profile">
+                <div class="popup__container">
+                    <button type="button" class="popup__closeBtn popup__closeBtn_edit-profile" aria-label="Close"></button>
+                    <form class="form form_type_edit-profile" name="editProfileForm">
                         <h2 class="form__heading">Edit profile</h2>
                         <fieldset class="form__fieldset">
                             <input type="text" class="form__input form__input_field_name" name="name" placeholder="Name">
                             <input type="text" class="form__input form__input_field_description" name="about" placeholder="About">
                         </fieldset>
-                        <button type="submit" class="form__submit">Save</button>
+                        <button type="submit" class="form__submit form__submit-edit">Save</button>
                     </form>
+                </div>
+            </div>
+
+            <div class="popup popup_type_image-popup">
+                <div class="popup__container">
+                    <button type="button" class="popup__closeBtn popup__closeBtn_theme_image" aria-label="Close"></button>
+                    <div class="imageLarge">
+                        <img class="imageLarge__image" src="." alt="img">
+                        <p class="imageLarge__name"></p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -65,6 +83,7 @@
             <p class="footer__copyright">&copy; 2021 Around The U.S.</p>
         </footer>
 
+        <script src="scripts/initial-cards.js"></script>
         <script src="scripts/script.js">
     
         </script>
