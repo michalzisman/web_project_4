@@ -44,8 +44,7 @@ function openAddPlacePopup() {
 }
 
 function closeAddPlacePopup() {
-    inputImageTitle.value ="";
-    inputImageLink.value ="";
+    addPlaceForm.reset()
     closePopup(addPlaceForm);
 }
 
@@ -61,8 +60,8 @@ function closeLargeImagePopup() {
 }
 
 function submitEditProfileForm(event) {
-    profileName.textContent = editProfileForm.querySelector(".form__input_field_name").value;
-    profileDescription.textContent = editProfileForm.querySelector(".form__input_field_description").value;
+    profileName.textContent = inputName.value;
+    profileDescription.textContent = inputDescription.value;
     event.preventDefault();
     closeEditProfilePopup();
 }
@@ -84,10 +83,11 @@ function deleteCard(event) {
 
 function cloneCard(item, inputDescription) {
     const card = cardTemplate.cloneNode(true);
-    card.querySelector(".card__image").src = inputDescription;
-    card.querySelector(".card__image").alt = item;
     card.querySelector(".card__title").textContent = item;
-    card.querySelector(".card__image").addEventListener("click", openImagePopup);
+    const cardImage = card.querySelector(".card__image");
+    cardImage.src = inputDescription;
+    cardImage.alt = item;
+    cardImage.addEventListener("click", openImagePopup);
     card.querySelector(".card__like").addEventListener("click", toggleLike);
     card.querySelector(".card__delete").addEventListener("click", deleteCard);
     return card;
