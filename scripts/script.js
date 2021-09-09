@@ -19,6 +19,8 @@ const closeEditProfileButton = document.querySelector(".popup__closeBtn_edit-pro
 const closeImagePopup = document.querySelector(".popup__closeBtn_theme_image");
 const submitEditForm = document.querySelector(".form_type_edit-profile");
 const submitNewPlaceForm = document.querySelector(".form_type_add-place");
+const editProfileSubmitBtn = editProfileForm.querySelector(".form__submit");
+const newPlaceSubmitBtn = addPlaceForm.querySelector(".form__submit");
 
 
 function openPopup(popup) {
@@ -26,12 +28,19 @@ function openPopup(popup) {
 }
 
 function closePopup(popup) {
-    popup.classList.remove("popup_opened");
+    if (popup.key === "Escape" && document.querySelector(".popup_opened")) {
+        popup = document.querySelector(".popup_opened")
+        popup.classList.remove("popup_opened");
+    } else if (popup.classList) {
+        popup.classList.remove("popup_opened");
+    }
 }
 
 function openEditProfilePopup() {
+    editProfileForm.querySelector(".popup__overlay").addEventListener("click", closeEditProfilePopup);
     inputName.value = profileName.textContent;
     inputDescription.value = profileDescription.textContent;
+    editProfileSubmitBtn.disabled = true;
     openPopup(editProfileForm);
 }
 
@@ -40,15 +49,19 @@ function closeEditProfilePopup() {
 }
 
 function openAddPlacePopup() {
+    addPlaceForm.querySelector(".popup__overlay").addEventListener("click", closeAddPlacePopup);
+    newPlaceSubmitBtn.disabled = true;
     openPopup(addPlaceForm);
 }
 
 function closeAddPlacePopup() {
-    addPlaceForm.reset()
+    inputImageTitle.value ="";
+    inputImageLink.value ="";
     closePopup(addPlaceForm);
 }
 
 function openImagePopup(event) {
+    imagePopup.querySelector(".popup__overlay").addEventListener("click", closeLargeImagePopup);
     largeImageData.src = event.target.currentSrc;
     largeImageData.alt = event.target.alt;
     largeImageName.textContent = event.target.alt;
@@ -96,6 +109,7 @@ function cloneCard(item, inputDescription) {
 const items = initialCards.map(item => cloneCard(item.name, item.link));
 cards.append(...items);
 
+
 openEditProfileFormBtn.addEventListener("click", openEditProfilePopup);
 openAddPlaceFormBtn.addEventListener("click", openAddPlacePopup);
 closeAddPlaceButton.addEventListener("click", closeAddPlacePopup);
@@ -103,3 +117,4 @@ closeEditProfileButton.addEventListener("click", closeEditProfilePopup);
 closeImagePopup.addEventListener("click", closeLargeImagePopup);
 submitEditForm.addEventListener("submit", submitEditProfileForm);
 submitNewPlaceForm.addEventListener("submit", submitAddNewPlaceForm);
+document.addEventListener("keydown", closePopup);

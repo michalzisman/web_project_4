@@ -1,4 +1,5 @@
 @import url(../vendor/normalize.css);
+@import url(../styles/variables.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
@@ -25,6 +26,7 @@
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__overlay/popup__overlay.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__closeBtn/popup__closeBtn.css);
 @import url(../blocks/popup/__closeBtn/_theme/popup__closeBtn_theme_image.css);
@@ -33,6 +35,9 @@
 @import url(../blocks/form/__fieldset/form__fieldset.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__submit/form__submit.css);
+@import url(../blocks/form/__input-error/form__input-error.css);
+@import url(../blocks/form/__input-error/_active/form__input-error_active.css);
+@import url(../blocks/form/__submit/_inactive/form__submit_inactive.css);
 @import url(../blocks/imageLarge/imageLarge.css);
 @import url(../blocks/imageLarge/__image/imageLarge__image.css);
 @import url(../blocks/imageLarge/__name/imageLarge__name.css);

@@ -41,34 +41,41 @@
             </section>
 
             <div class="popup popup_type_add-place">
+                <div class="popup__overlay"></div>
                 <div class="popup__container">
                     <button type="button" class="popup__closeBtn popup__closeBtn_add-place" aria-label="Close"></button>
-                    <form class="form form_type_add-place" name="addPlaceForm">
+                    <form class="form form_type_add-place" name="addPlaceForm" novalidate>
                         <h2 class="form__heading">New place</h2>
                         <fieldset class="form__fieldset">
-                            <input type="text" class="form__input form__input_field_title" name="title" placeholder="Title">
-                            <input type="text" class="form__input form__input_field_link" name="link" placeholder="Image link">
+                            <input type="text" class="form__input form__input_field_title" id="title-input" name="title" placeholder="Title" minlength="1" maxlength="30" required>
+                            <span class="form__input-error title-input-error"></span>
+                            <input type="url" class="form__input form__input_field_link" id="link-input" name="link" placeholder="Image link" required>
+                            <span class="form__input-error link-input-error"></span>
+                            <button type="submit" class="form__submit" disabled>Create</button>
                         </fieldset>
-                        <button type="submit" class="form__submit">Create</button>
                     </form>
                 </div>
             </div>
 
             <div class="popup popup_type_edit-profile">
+                <div class="popup__overlay"></div>
                 <div class="popup__container">
                     <button type="button" class="popup__closeBtn popup__closeBtn_edit-profile" aria-label="Close"></button>
-                    <form class="form form_type_edit-profile" name="editProfileForm">
+                    <form class="form form_type_edit-profile" name="editProfileForm" novalidate>
                         <h2 class="form__heading">Edit profile</h2>
                         <fieldset class="form__fieldset">
-                            <input type="text" class="form__input form__input_field_name" name="name" placeholder="Name">
-                            <input type="text" class="form__input form__input_field_description" name="about" placeholder="About">
+                            <input type="text" class="form__input form__input_field_name" id="name-input" name="name" placeholder="Name" minlength="2" maxlength="40" required>
+                            <span class="form__input-error name-input-error"></span>
+                            <input type="text" class="form__input form__input_field_description" id="about-input" name="about" placeholder="About" minlength="2" maxlength="200" required>
+                            <span class="form__input-error about-input-error"></span>
+                            <button type="submit" class="form__submit form__submit-edit" disabled>Save</button>
                         </fieldset>
-                        <button type="submit" class="form__submit form__submit-edit">Save</button>
                     </form>
                 </div>
             </div>
 
             <div class="popup popup_type_image-popup">
+                <div class="popup__overlay"></div>
                 <div class="popup__container">
                     <button type="button" class="popup__closeBtn popup__closeBtn_theme_image" aria-label="Close"></button>
                     <div class="imageLarge">
@@ -84,6 +91,7 @@
         </footer>
 
         <script src="scripts/initial-cards.js"></script>
+        <script src="scripts/validate.js"></script>
         <script src="scripts/script.js">
     
         </script>

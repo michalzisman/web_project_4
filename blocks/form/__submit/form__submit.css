@@ -9,8 +9,8 @@
     opacity: 1;
     transition: 0.3s;
     cursor: pointer;
-    width: calc(100% - (36px * 2));
-    margin: 0px 36px 30px 36px;
+    /* width: calc(100% - (36px * 2)); */
+    /* margin: 0px 36px 30px 36px; */
     border: none;
     height: 50px;
 }
@@ -21,8 +21,8 @@
 
 @media screen and (max-width: 550px) {
     .form__submit {
-        width: calc(100% - (22px * 2));
-        margin: 0px 22px 25px 22px;
+        /* width: calc(100% - (22px * 2));
+        margin: 0px 22px 25px 22px; */
         font-size: 14px;
         line-height: 17px;
     }
