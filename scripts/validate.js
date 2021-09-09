@@ -2,12 +2,14 @@ function showInputError(fieldset, inputElement, errorMessage, variables) {
     const errorElement = fieldset.querySelector(`.${inputElement.id}-error`);
     errorElement.textContent = errorMessage;
     errorElement.classList.add(variables.errorClass);
+    inputElement.classList.add(variables.inputErrorRedLine);
 }
 
 function hideInputError(fieldset, inputElement, variables) {
     const errorElement = fieldset.querySelector(`.${inputElement.id}-error`);
     errorElement.textContent = "";
     errorElement.classList.remove(variables.errorClass);
+    inputElement.classList.remove(variables.inputErrorRedLine);
 }
 
 function checkInputValidity(fieldset, inputElement, variables) {
@@ -68,6 +70,7 @@ const variables = {
     submitButtonSelector: ".form__submit",
     inactiveButtonClass: "form__submit_inactive",
     inputErrorClass: "form__input-error",
+    inputErrorRedLine: "form__input_theme_red",
     errorClass: "form__input-error_active"
 }
 

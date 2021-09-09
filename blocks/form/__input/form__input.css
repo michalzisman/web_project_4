@@ -16,7 +16,3 @@
 .form__input:last-of-type {
     margin-bottom: 40px;
 }
-
-.form__input:invalid {
-    border-bottom: 1px solid var(--red);
-} 
