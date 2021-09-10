@@ -35,17 +35,11 @@ function closePopup(popup) {
     popup.classList.remove("popup_opened");
 }
 
-function escKeyListener(document) {
+function escKeyListener(event) {
     let element;
-    if (document.key === "Escape") {
-        if (addPlaceForm.classList.contains("popup_opened")) {
-            element = addPlaceForm;
-        } else if (editProfileForm.classList.contains("popup_opened")) {
-            element = editProfileForm;
-        } else {
-            element = imagePopup;
-        }
-        closePopup(element)
+    if (event.key === "Escape") {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup)
     }
 }
 
