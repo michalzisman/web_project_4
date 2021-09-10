@@ -62,8 +62,9 @@ function closeEditProfilePopup() {
 }
 
 function openAddPlacePopup() {
+    newPlaceSubmitBtn.classList.add("form__submit_inactive")
     newPlaceSubmitBtn.disabled = true;
-    hasInvalidInput();
+    // hasInvalidInput();
     openPopup(addPlaceForm);
 }
 
