@@ -36,7 +36,6 @@ function closePopup(popup) {
 }
 
 function escKeyListener(event) {
-    let element;
     if (event.key === "Escape") {
         const openedPopup = document.querySelector('.popup_opened');
         closePopup(openedPopup)
