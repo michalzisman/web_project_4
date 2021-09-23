@@ -4,58 +4,58 @@ class FormValidator {
         this.formElement = formElement;
     }
 
-    _hasInvalidInput(inputList) {
-        return inputList.some((inputElement) => {
+    _hasInvalidInput() {
+        return this.inputList.some((inputElement) => {
             return !inputElement.validity.valid;
         });
     }
 
-    _checkInputValidity(fieldset, inputElement, variables) {
+    _checkInputValidity(inputElement) {
         if (!inputElement.validity.valid) {
-            this._showInputError(fieldset, inputElement, inputElement.validationMessage, variables);
+            this._showInputError(inputElement, inputElement.validationMessage);
         } else {
-            this._hideInputError(fieldset, inputElement, variables);
+            this._hideInputError(inputElement);
         }
     }
 
-    _showInputError(fieldset, inputElement, errorMessage, variables) {
-        const errorElement = fieldset.querySelector(`.${inputElement.id}-error`);
+    _showInputError(inputElement, errorMessage) {
+        const errorElement = this.formElement.querySelector(`.${inputElement.id}-error`);
         errorElement.textContent = errorMessage;
-        errorElement.classList.add(variables.errorClass);
-        inputElement.classList.add(variables.inputErrorRedLine);
+        errorElement.classList.add(this.settings.errorClass);
+        inputElement.classList.add(this.settings.inputErrorRedLine);
     }
 
-    _hideInputError(fieldset, inputElement, variables) {
-        const errorElement = fieldset.querySelector(`.${inputElement.id}-error`);
+    _hideInputError(inputElement) {
+        const errorElement = this.formElement.querySelector(`.${inputElement.id}-error`);
         errorElement.textContent = "";
-        errorElement.classList.remove(variables.errorClass);
-        inputElement.classList.remove(variables.inputErrorRedLine);
+        errorElement.classList.remove(this.settings.errorClass);
+        inputElement.classList.remove(this.settings.inputErrorRedLine);
     }
     
-    _toggleButtonState(inputList, buttonElement, variables) {
-        if (this._hasInvalidInput(inputList)) {
-            buttonElement.disabled = true;
-            buttonElement.classList.add(variables.inactiveButtonClass);
+    _toggleButtonState() {
+        if (this._hasInvalidInput()) {
+            this.buttonElement.disabled = true;
+            this.buttonElement.classList.add(this.settings.inactiveButtonClass);
         } else {
-            buttonElement.disabled = false;
-            buttonElement.classList.remove(variables.inactiveButtonClass);
+            this.buttonElement.disabled = false;
+            this.buttonElement.classList.remove(this.settings.inactiveButtonClass);
         }
     }
 
     resetValidation() {
         this.inputList.forEach(input => {
-            this._hideInputError(this.formElement, input, this.settings)
+            this._hideInputError(input)
         })
     }
 
-    _setEventListeners(formElement, variables) {
-        this.inputList = Array.from(formElement.querySelectorAll(variables.inputSelector));
-        const buttonElement = formElement.querySelector(variables.submitButtonSelector);
-        this._toggleButtonState(this.inputList, buttonElement, variables);
+    _setEventListeners() {
+        this.inputList = Array.from(this.formElement.querySelectorAll(this.settings.inputSelector));
+        this.buttonElement = this.formElement.querySelector(this.settings.submitButtonSelector);
+        this._toggleButtonState();
         this.inputList.forEach((inputElement) => {
             inputElement.addEventListener("input", () => {
-                this._checkInputValidity(formElement, inputElement, variables);
-                this._toggleButtonState(this.inputList, buttonElement, variables);
+                this._checkInputValidity(inputElement);
+                this._toggleButtonState();
             });
         });
     }
@@ -65,11 +65,7 @@ class FormValidator {
             evt.preventDefault();
         });
     
-        const fieldsetList = Array.from(this.formElement.querySelectorAll(this.settings.fieldsetSelector));
-    
-        fieldsetList.forEach((fieldset) => {
-            this._setEventListeners(fieldset, this.settings);
-        });
+        this._setEventListeners();
     }
 }
 

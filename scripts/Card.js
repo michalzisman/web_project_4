@@ -25,13 +25,13 @@ class Card {
     }
 
     _setEventListeners() {
-        this._cardImage.addEventListener("click", () => {
+        this._cardImage.addEventListener("click", (event) => {
             openImagePopup(event);
         });
-        this._cardLike.addEventListener("click", () => {
+        this._cardLike.addEventListener("click", (event) => {
             this._toggleLike(event);
         });
-        this._cardDelete.addEventListener("click", () => {
+        this._cardDelete.addEventListener("click", (event) => {
             this._deleteCard(event);
         });
     }

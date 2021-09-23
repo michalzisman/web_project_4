@@ -36,9 +36,7 @@ const closeEditProfileButton = document.querySelector(".popup__closeBtn_edit-pro
 const closeImagePopup = document.querySelector(".popup__closeBtn_theme_image");
 const submitEditForm = document.querySelector(".form_type_edit-profile");
 const submitNewPlaceForm = document.querySelector(".form_type_add-place");
-const editProfileSubmitBtn = editProfileForm.querySelector(".form__submit");
 const editProfileOverlay = editProfileForm.querySelector(".popup__overlay");
-const newPlaceSubmitBtn = addPlaceForm.querySelector(".form__submit");
 const newPlaceOverlay = addPlaceForm.querySelector(".popup__overlay");
 const largeImageOverlay = imagePopup.querySelector(".popup__overlay");
 
@@ -60,11 +58,9 @@ function escKeyListener(event) {
 }
 
 function openEditProfilePopup() {
-    editProfileSubmitBtn.classList.remove("form__submit_inactive");
     inputName.value = profileName.textContent;
     inputDescription.value = profileDescription.textContent;
     editProfileFormValidator.enableValidation();
-    editProfileSubmitBtn.disabled = false;
     openPopup(editProfileForm);
 }
 
@@ -74,8 +70,6 @@ function closeEditProfilePopup() {
 }
 
 function openAddPlacePopup() {
-    newPlaceSubmitBtn.classList.add("form__submit_inactive")
-    newPlaceSubmitBtn.disabled = true;
     openPopup(addPlaceForm);
 }
 
