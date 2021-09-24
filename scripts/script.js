@@ -60,7 +60,6 @@ function escKeyListener(event) {
 function openEditProfilePopup() {
     inputName.value = profileName.textContent;
     inputDescription.value = profileDescription.textContent;
-    editProfileFormValidator.enableValidation();
     openPopup(editProfileForm);
 }
 
