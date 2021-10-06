@@ -1,9 +1,9 @@
-import { openImagePopup } from "./script.js";
+import { openImagePopup } from "../script.js";
 
 class Card {
-    constructor(item, cardTemplate) {
-        this._text = item.name;
-        this._image = item.link;
+    constructor({ name, link }, cardTemplate) {
+        this._text = name;
+        this._image = link;
         this._cardTemplate = cardTemplate;
     }
 
