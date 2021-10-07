@@ -1,13 +1,15 @@
-import Popup from "./Popup.js";
+import { Popup } from "./Popup.js";
 
-export default class PopupWithForm extends Popup {
+export class PopupWithForm extends Popup {
     constructor(callback, popUp, closeIcon) {
         super(popUp, closeIcon);
         this._submit = callback;
         this.closeIcon = closeIcon;
+        this._form = this._popUp.querySelector(".form");
     }
 
     close() {
+        this._form.reset();
         super.close();
     }
 
@@ -21,17 +23,12 @@ export default class PopupWithForm extends Popup {
         return inputValues;
     }
 
-    _submitForm(event) {
-        this._submit(event, this._getInputValues());
+    _submitForm() {
+        this._submit(this._getInputValues());
         this.close();
     }
 
     setEventListeners() {
-        this._popUp.addEventListener("submit", (event) =>{
-            this._submitForm(event);
-        });
-        this._closeIcon.addEventListener("click", () =>{
-            this.close();
-        });
+        super.setEventListeners();
     }
 }

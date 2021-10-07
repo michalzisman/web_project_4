@@ -1,10 +1,9 @@
-import { openImagePopup } from "../script.js";
-
 class Card {
-    constructor({ name, link }, cardTemplate) {
+    constructor({ name, link }, cardTemplate, openImagePopup) {
         this._text = name;
         this._image = link;
         this._cardTemplate = cardTemplate;
+        this._openImagePopup = openImagePopup;
     }
 
     _getTemplate() {
@@ -26,7 +25,7 @@ class Card {
 
     _setEventListeners() {
         this._cardImage.addEventListener("click", (event) => {
-            openImagePopup(event);
+            this._openImagePopup(event);
         });
         this._cardLike.addEventListener("click", (event) => {
             this._toggleLike(event);

@@ -2,7 +2,7 @@
   "name": "web_project_4_2",
   "version": "1.0.0",
   "description": "### Overview * Intro * Technologies * Link to GitHub Pages",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && webpack --mode production",
     "dev": "webpack serve"

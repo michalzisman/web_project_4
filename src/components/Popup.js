@@ -1,13 +1,11 @@
-export default class Popup {
-    constructor(popUp, closeIcon, overlay) {
+export class Popup {
+    constructor(popUp) {
         this._popUp = popUp;
-        this._closeIcon = closeIcon;
-        this._overlay = overlay;
         this._boundEventHandler = this._handleEscClose.bind(this); // removeEventListener only works with this.
     }
 
     open() {
-        this.setEventListeners();
+        document.addEventListener("keydown", this._boundEventHandler);
         this._popUp.classList.add("popup_opened");
     }
 
@@ -17,12 +15,14 @@ export default class Popup {
     }
 
     setEventListeners() {
-        document.addEventListener("keydown", this._boundEventHandler);
-        this._closeIcon.addEventListener("click", () =>{
+        this._popUp.querySelector(".popup__closeBtn").addEventListener("click", () =>{
             this.close();
         });
-        this._overlay.addEventListener("click", () =>{
+        this._popUp.querySelector(".popup__overlay").addEventListener("click", () =>{
             this.close();
+        });
+        this._popUp.addEventListener("submit", () =>{
+            this._submitForm();
         });
     }
 
