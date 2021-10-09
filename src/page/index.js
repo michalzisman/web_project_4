@@ -43,6 +43,7 @@ const newPlaceElement = new PopupWithForm(submitAddNewPlaceForm, addPlaceForm);
 newPlaceElement.setEventListeners();
 
 const largeImage = new PopupWithImage(imagePopup);
+largeImage.setEventListeners();
 
 
 function openEditProfilePopup() {
