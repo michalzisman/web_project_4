@@ -21,9 +21,6 @@ export class Popup {
         this._popUp.querySelector(".popup__overlay").addEventListener("click", () =>{
             this.close();
         });
-        this._popUp.addEventListener("submit", () =>{
-            this._submitForm();
-        });
     }
 
     _handleEscClose(event) {

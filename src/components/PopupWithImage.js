@@ -7,7 +7,6 @@ export class PopupWithImage extends Popup {
         this._largeImageName = this._popUp.querySelector(".imageLarge__name");
     }
     open({currentSrc, alt}) {
-        super.setEventListeners();
         this._largeImageData.src = currentSrc;
         this._largeImageData.alt = currentSrc;
         this._largeImageName.textContent = alt;

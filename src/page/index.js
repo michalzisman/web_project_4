@@ -69,7 +69,6 @@ function submitUserInfo({about, name}) {
 function submitAddNewPlaceForm({ link, name }) {
     const card = cloneCard({ link, name }, cardTemplate);
     defaultCards.addItem(card);
-    event.preventDefault();
 }
 
 function cloneCard(item, cardTemplate) {
