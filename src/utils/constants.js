@@ -10,6 +10,8 @@ export const settings = {
 
 export const addPlaceForm = document.querySelector(".popup_type_add-place");
 export const editProfileForm = document.querySelector(".popup_type_edit-profile");
+export const editProfilePicForm = document.querySelector(".popup_type_edit-profilePic");
+export const deleteCardForm = document.querySelector(".popup_type_delete-card");
 export const cardTemplate = document.querySelector("#card").content;
 export const imagePopup = document.querySelector(".popup_type_image-popup");
 export const cards = document.querySelector(".cards");
@@ -21,8 +23,9 @@ export const inputName = editProfileForm.querySelector(".form__input_field_name"
 export const inputDescription = editProfileForm.querySelector(".form__input_field_description");
 export const inputImageTitle = addPlaceForm.querySelector(".form__input_field_title");
 export const inputImageLink = addPlaceForm.querySelector(".form__input_field_link");
+export const inputProfilePicLink = editProfilePicForm.querySelector(".form__input_field_link");
 export const logoImage = document.getElementById("logo");
-export const avatarImage = document.getElementById("avatar");
+export const avatarImage = document.querySelector(".profile__avatar");
 
 
 

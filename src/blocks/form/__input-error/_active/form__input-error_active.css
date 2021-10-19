@@ -2,10 +2,11 @@
    display: inline;
    position: absolute;
    top: 35px;
+   width: 100%;
+   left: 0;
 }
 
 .form__input-error_active:last-of-type {
     display: inline;
     position: absolute;
-    top: 100px;
  }

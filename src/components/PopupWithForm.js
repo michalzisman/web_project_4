@@ -23,15 +23,17 @@ export class PopupWithForm extends Popup {
         return inputValues;
     }
 
-    _submitForm() {
+    _submitForm(event) {
+        event.submitter.textContent = "Saving...";
         this._submit(this._getInputValues());
         this.close();
+        event.submitter.textContent = "Save";
     }
 
     setEventListeners() {
         super.setEventListeners();
-        this._popUp.addEventListener("submit", () =>{
-            this._submitForm();
+        this._popUp.addEventListener("submit", (event) =>{
+            this._submitForm(event);
         });
     }
 }

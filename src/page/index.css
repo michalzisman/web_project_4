@@ -8,6 +8,8 @@
 @import url(../blocks/profile/__data/profile__data.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__avatar-overlay/profile__avatar-overlay.css);
+@import url(../blocks/profile/__avatar-edit/profile__avatar-edit.css);
 @import url(../blocks/profile/__info-top/profile__info-top.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__edit/profile__edit.css);
@@ -17,8 +19,10 @@
 @import url(../blocks/card/card.css);
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__delete/card__delete.css);
+@import url(../blocks/card/__delete/_visible/card__delete_visible.css);
 @import url(../blocks/card/__title/card__title.css);
 @import url(../blocks/card/__like/card__like.css);
+@import url(../blocks/card/__likesNumber/card__likesNumber.css);
 @import url(../blocks/card/__like/_active/card__like_active.css);
 @import url(../blocks/card/__info/card__info.css);
 @import url(../blocks/footer/footer.css);
@@ -31,8 +35,10 @@
 @import url(../blocks/popup/__closeBtn/_theme/popup__closeBtn_theme_image.css);
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__heading/form__heading.css);
+@import url(../blocks/form/__heading/_theme/form__heading_theme_alert.css);
 @import url(../blocks/form/__fieldset/form__fieldset.css);
 @import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input-wrapper/form__input-wrapper.css);
 @import url(../blocks/form/__input/_theme/form__input_theme_red.css);
 @import url(../blocks/form/__submit/form__submit.css);
 @import url(../blocks/form/__input-error/form__input-error.css);

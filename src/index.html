@@ -14,13 +14,17 @@
 
             <section class="profile">
                 <div class="profile__data">
-                    <img class="profile__avatar" id="avatar" alt="User Avatar">
+                    <div class="profile__avatar">
+                        <div class="profile__avatar-overlay">
+                            <div class="profile__avatar-edit"></div>
+                        </div>
+                    </div>
                     <div class="profile__info">
                         <div class="profile__info-top">
-                            <h1 class="profile__name">Jacques Cousteau</h1>
+                            <h1 class="profile__name"></h1>
                             <button type="button" class="profile__edit" aria-label="Edit"></button>
                         </div>
-                        <p class="profile__description">Explorer</p>
+                        <p class="profile__description"></p>
                     </div>
                 </div>                
                 <button type="button" class="profile__add-button" aria-label="Add"></button>
@@ -33,7 +37,10 @@
                         <img class="card__image" src="." alt="">
                         <div class="card__info">
                             <h2 class="card__title"></h2>
-                            <button type="button" class="card__like" aria-label="Like"></button>
+                            <div class="card_likesWrapper">
+                                <button type="button" class="card__like" aria-label="Like"></button>
+                                <p class="card__likesNumber"></p>
+                            </div>
                         </div>
                     </div>
                 </template>
@@ -63,10 +70,28 @@
                     <form class="form form_type_edit-profile" name="editProfileForm" novalidate>
                         <h2 class="form__heading">Edit profile</h2>
                         <fieldset class="form__fieldset">
+                            <div class="form__input-wrapper"></div>
                             <input type="text" class="form__input form__input_field_name" id="name-input" name="name" placeholder="Name" minlength="2" maxlength="40" required>
                             <span class="form__input-error name-input-error"></span>
                             <input type="text" class="form__input form__input_field_description" id="about-input" name="about" placeholder="About" minlength="2" maxlength="200" required>
                             <span class="form__input-error about-input-error"></span>
+                            <button type="submit" class="form__submit form__submit-edit" disabled>Save</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="popup popup_type_edit-profilePic">
+                <div class="popup__overlay"></div>
+                <div class="popup__container">
+                    <button type="button" class="popup__closeBtn popup__closeBtn_edit-profilePic" aria-label="Close"></button>
+                    <form class="form form_type_edit-profile" name="editProfilePicForm" novalidate>
+                        <h2 class="form__heading">Change profile picture</h2>
+                        <fieldset class="form__fieldset">
+                            <div class="form__input-wrapper">
+                                <input type="url" class="form__input form__input_field_link" id="link-input" name="avatar" placeholder="Image link" required>
+                                <span class="form__input-error link-input-error"></span>
+                            </div>
                             <button type="submit" class="form__submit form__submit-edit" disabled>Save</button>
                         </fieldset>
                     </form>
@@ -81,6 +106,19 @@
                         <img class="imageLarge__image" src="." alt="img">
                         <p class="imageLarge__name"></p>
                     </div>
+                </div>
+            </div>
+
+            <div class="popup popup_type_delete-card">
+                <div class="popup__overlay"></div>
+                <div class="popup__container">
+                    <button type="button" class="popup__closeBtn popup__closeBtn_delete-card" aria-label="Close"></button>
+                    <form class="form form_type_delete-card" name="deleteCardForm" novalidate>
+                        <h2 class="form__heading form__heading_theme_alert">Are you sure?</h2>
+                        <fieldset class="form__fieldset">
+                            <button type="submit" class="form__submit form__submit-delete">Yes</button>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </main>
